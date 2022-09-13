@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: YankiService
+  cloud:
+    config:
+      username: user
+      password: password.
+  config:
+    import: configserver:http://localhost:8888
