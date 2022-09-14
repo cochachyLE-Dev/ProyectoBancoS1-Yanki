@@ -26,19 +26,19 @@ public class BitcoinController {
       kafkaTemplate.send("topic1", msg);
 	}
 	
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@RequestMapping(value = "/exchangeCurrency", method = RequestMethod.POST)
 	Mono<UnitResult<Transaction>> exchangeCurrency(@RequestBody Transaction entity){
 		return TransactionRepository.create(entity);
 	}
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	Mono<UnitResult<Transaction>> listBankAccount(){
 		return TransactionRepository.findAll();
 	}
-	@RequestMapping(value = "/{CurrencyCode}", method = RequestMethod.POST)
+	@RequestMapping(value = "/{CurrencyCode}", method = RequestMethod.GET)
 	Mono<UnitResult<Transaction>> consultSpecialExchangeRate(@PathVariable String currencyCode){
 		return TransactionRepository.findByAccountNumber(currencyCode);
 	}
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@RequestMapping(value = "/createAccount", method = RequestMethod.POST)
 	Mono<UnitResult<Transaction>> createAccount(@RequestBody Transaction entity){
 		return TransactionRepository.create(entity);
 	}
