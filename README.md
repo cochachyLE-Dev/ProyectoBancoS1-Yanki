@@ -1,11 +1,8 @@
-![img](https://github.com/cochachyLE-Dev/ProyectoBancoS1-Service1/blob/main/Diagram-Arquitecture.PNG)
+![img](https://github.com/cochachyLE-Dev/ProyectoBancoS1-Yanki/blob/main/Diagram-Arquitecture.PNG)
 
 
-```ps1
-## Create directories: 
-#rm broker_1, broker_2, broker_3, zookeeper
-#md broker_1, broker_2, broker_3, zookeeper
-```
+![img](https://github.com/cochachyLE-Dev/ProyectoBancoS1-Yanki/blob/main/YankiService-Diagram.PNG)
+
 
 configuration of <code>zookeeper.properties</code>
 
